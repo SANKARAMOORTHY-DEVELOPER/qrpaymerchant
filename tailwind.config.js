@@ -1,31 +1,29 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: '#ecf7ff',
+        secondary: '#00288a',
+        'secondary-light': '#113a9f',
+        'blue-light': '#1e49b3',
+        light: '#b0c6e2',
+        'download-blue': '#3dbcf9',
+        'download-orange': '#ff9b05',
+      },
+      fontFamily: {
+        'spline-sans': ['Spline Sans', 'sans-serif'],
+      },
+      animation: {
+        'pulse-once': 'pulse 350ms ease-in-out 1',
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+        },
       },
     },
-    colors: {
-      primary: {
-        'dark-blue': 'hsl(233, 26%, 24%)',
-        'lime-green': 'hsl(136, 65%, 51%)',
-        'bright-cyan': 'hsl(192, 70%, 51%)',
-      },
-      neutral: {
-        'grayish-blue': 'hsl(233, 8%, 62%)',
-        'light-grayish-blue': 'hsl(220, 16%, 96%)',
-        'very-light-gray': 'hsl(0, 0%, 98%)',
-        white: 'hsl(0, 0%, 100%)',
-      },
-    }
   },
   plugins: [],
-}
+};
