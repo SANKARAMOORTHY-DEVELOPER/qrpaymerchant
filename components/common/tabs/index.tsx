@@ -24,14 +24,10 @@ const Layout = ({ children }: TabProps) => {
     () => [
       {
         icon: VCardSvg,
-        href: '/',
+        href: '/email',
         id: 'tab-1',
       },
-      {
-        icon: VCardSvg,
-        href: '/email',
-        id: 'tab-2',
-      },
+
 
   
     ],
